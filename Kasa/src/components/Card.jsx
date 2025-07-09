@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Card.css"; // a modifier plus tard
+import "./styles/Card.css"; // a modifier plus tard
 
 export default function Card({ id, title, cover }) {
   return (

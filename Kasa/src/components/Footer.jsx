@@ -1,5 +1,5 @@
-import "./Footer.css";
-import logo from "../assets/logos/logo-white.svg"; // a modifier plus tard pour le bon nom
+import "./styles/Footer.css";
+import logo from "../assets/logos/Logo-Kasa-dark.png"; // a modifier plus tard pour le bon nom
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import bannerImage from "../assets/images/image-1.png";
-import "../pages/Home.css"; // fichier a creer plus tard pour le css
+import "../styles/Home.css"; // fichier a creer plus tard pour le css
 
 export default function Home() {
   return (
