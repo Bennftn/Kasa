@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logement.json";
 import Collapse from "../components/Collapse";
+import Carousel from "../components/Carousel";
 import "../styles/Logement.css"; // ajout et creation du fichier par la suite
 
 export default function Logement() {
@@ -16,15 +17,17 @@ export default function Logement() {
     <main className="logement-page">
       <section className="logement-header">
         {/*carousel + titre + hôte */}
+        <Carousel pictures={logement.pictures} />
         <h1>{logement.title}</h1>
         <p>{logement.location}</p>
       </section>
 
+      {/* // test de l'affichage des images
       <section className="logement-images">
         {logement.pictures.map((pic, index) => (
           <img key={index} src={pic} alt={`Vue ${index + 1}`} />
         ))}
-      </section>
+        </section>*/}
 
       <section className="logement-details">
         <div className="host">
