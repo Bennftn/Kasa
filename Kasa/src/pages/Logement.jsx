@@ -1,18 +1,44 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+import logements from "../data/logement.json";
+import Collapse from "../components/Collapse";
 import "../styles/Logement.css"; // ajout et creation du fichier par la suite
 
 export default function Logement() {
   const { id } = useParams();
+  const logement = logements.find((item) => item.id === id);
+
+  //redirige vers 404 si l'id n'existe pas
+  if (!logement) {
+    return <Navigate to="/404" />;
+  }
 
   return (
     <main className="logement-page">
       <section className="logement-header">
         {/*carousel + titre + hôte */}
+        <h1>{logement.title}</h1>
+        <p>{logement.location}</p>
       </section>
 
-      <section className="logement-body">
-        {/*tags + rating + collapse */}
+      <section className="logement-images">
+        {logement.pictures.map((pic, index) => (
+          <img key={index} src={pic} alt={`Vue ${index + 1}`} />
+        ))}
       </section>
+
+      <section className="logement-details">
+        <div className="host">
+          <p>{logement.host.name}</p>
+          <img src={logement.host.picture} alt={logement.host.name} />
+        </div>
+
+        <div className="rating">
+          <p>Note : {logement.rating}</p>
+        </div>
+      </section>
+
+      <Collapse title="Description" content={logement.description} />
+      <Collapse title="Équipements" content={logement.equipments} />
     </main>
   );
 }
