@@ -2,6 +2,8 @@ import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logement.json";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
+import Tag from "../components/Tag";
+import Rating from "../components/Rating";
 import "../styles/Logement.css"; // ajout et creation du fichier par la suite
 
 export default function Logement() {
@@ -20,6 +22,11 @@ export default function Logement() {
         <Carousel pictures={logement.pictures} />
         <h1>{logement.title}</h1>
         <p>{logement.location}</p>
+        <div className="logement-tags">
+          {logement.tags.map((tag, index) => (
+            <Tag key={index} text={tag} />
+          ))}
+        </div>
       </section>
 
       {/* // test de l'affichage des images
@@ -36,7 +43,7 @@ export default function Logement() {
         </div>
 
         <div className="rating">
-          <p>Note : {logement.rating}</p>
+          <Rating rating={parseInt(logement.rating)} />
         </div>
       </section>
 
