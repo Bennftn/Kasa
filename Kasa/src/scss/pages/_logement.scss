@@ -1,0 +1,54 @@
+@use "../base/_variables" as *;
+.logement-page {
+  padding: $spacing_lg;
+
+  .logement-header {
+    margin-bottom: $spacing_md;
+
+    h1 {
+      font-size: $font-size-large;
+      color: $primary-color;
+      font-family: $font-main;
+    }
+
+    p {
+      font-size: $font-size_small;
+      color: $text-color;
+      font-family: $font-main;
+    }
+  }
+
+  .logement-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $spacing_md 0;
+
+    .host {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: $spacing_sm;
+      }
+
+      p {
+        margin: 0;
+        font-family: $font-main;
+      }
+    }
+
+    .rating {
+      color: $primary-color;
+      font-family: $font-main;
+    }
+  }
+
+  .logement-description {
+    margin-top: $spacing_md;
+    font-family: $font-main;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing_lg;
+  padding: $spacing_lg;
+  width: 100%;
+  max-width: 1200px; // ou la largeur de la maquette
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%; // <--- important : laisser le grid gérer la largeur
+  height: 300px; // adapte selon la maquette
+  /* object-fit: cover sur l'image */
+}
+

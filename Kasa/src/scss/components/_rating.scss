@@ -1,0 +1,18 @@
+/* style provisoire en attendant sass */
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 24px;
+}
+
+.star.red {
+    color: #FF6060;
+}
+
+.star.grey {
+    color: #E3E3E3;
+}

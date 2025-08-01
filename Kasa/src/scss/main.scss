@@ -1,0 +1,18 @@
+@use "./base/reset.scss";
+@use "./base/base.scss";
+@use "./base/variables.scss";
+
+@use "./layout/header.scss";
+@use "./layout/footer.scss";
+@use "./layout/main.scss";
+
+@import "components/_footer.scss";
+@import "pages/_logement.scss";
+@use "pages/logement.scss";
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'layout';
+@import 'components';

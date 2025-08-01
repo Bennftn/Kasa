@@ -1,0 +1,19 @@
+@use "../base/_variables" as *;
+.footer {
+    background-color: $dark-grey;
+    color: $white;
+    padding: $spacing-lg;
+    text-align: center;
+
+    .footer-logo {
+        height: 40px;
+        margin-bottom: $spacing-md;
+    }
+
+    p {
+        font-size: $font-size-small;
+        margin: 0;
+    }
+
+}
+
