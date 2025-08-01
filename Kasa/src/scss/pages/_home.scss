@@ -1,18 +1,62 @@
-@use "../base/variables" as *;
+@import "../base/variables";
 
-.gallery {
+.home {
+  padding: 40px 0 60px 0;
+  min-height: calc(100vh - 140px); // header + footer
+
+  .home-gallery {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    .banner-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 2.2rem;
+      font-weight: bold;
+      width: 90%;
+      text-align: center;
+      z-index: 2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+      @media (max-width: 800px) {
+        font-size: 1.5rem;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .home-gallery {
+  background: $secondary-color;      // Utilise ta variable ou #F7F7F7
+  border-radius: 25px;
+  padding: 45px 60px 35px 60px;      // Haut-Droite-Bas-Gauche (ajuste selon rendu)
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: $spacing_lg;
-  padding: $spacing_lg;
-  width: 100%;
-  max-width: 1200px; // ou la largeur de la maquette
-  margin: 0 auto;
+  gap: 50px 60px;
+    @media (max-width: 900px) {
+    grid-template-columns: 1fr; // 👉 1 colonne sur mobile/tablette
+    gap: 30px 0;
+    }
+  }
 }
-
-.card {
-  width: 100%; // <--- important : laisser le grid gérer la largeur
-  height: 300px; // adapte selon la maquette
-  /* object-fit: cover sur l'image */
-}
-
