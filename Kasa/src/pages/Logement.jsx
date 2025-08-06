@@ -2,7 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logement.json";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
-import TagList from "../components/Tag";
+import TagList from "../components/TagList";
 import Rating from "../components/Rating";
 import HostCard from "../components/HostCard";
 import "../scss/pages/_logement.scss";
@@ -23,7 +23,7 @@ function Logement() {
   return (
     <div>
       <Carousel pictures={logement.pictures} />
-      <div className="housing-header">
+      <div className="logement-header">
         <div className="info-logement">
           <h1 id="title-logement">{logement.title}</h1>
           <p className="location">
