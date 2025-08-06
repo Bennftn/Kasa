@@ -1,1 +1,49 @@
 @import "../base/variables";
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.error-title {
+  font-size: 288px;
+  color: $primary-color;
+  margin: 0;
+  max-width: 100%;
+}
+
+.error-message {
+  font-size: 36px;
+  color: $primary-color;
+  font-weight: normal;
+  max-width: 100%;
+}
+
+.error404link {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  margin: 4rem 0;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .error-page {
+    gap: 2rem;
+  }
+
+  .error-title {
+    font-size: 96px;
+  }
+  .error-message {
+    font-size: 18px;
+  }
+  .error404link {
+    font-size: 14px;
+  }
+}

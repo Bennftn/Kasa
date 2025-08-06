@@ -6,9 +6,9 @@ import "../scss/pages/_error404.scss"; // ajout et creation du fichier par la su
 export default function Error404() {
   return (
     <main className="error-page">
-      <h1>404</h1>
-      <p>Oups! La page que vous demandez n'existe pas.</p>
-      <Link to="/">Retourner sur la page d'accueil</Link>
+      <h1 className="error-title">404</h1>
+      <p className="error-message">Oups! La page que vous demandez n'existe pas.</p>
+      <Link className="error404link" to="/">Retourner sur la page d'accueil</Link>
     </main>
   );
 }
