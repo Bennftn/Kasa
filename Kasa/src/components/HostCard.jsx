@@ -1,3 +1,5 @@
+import "../scss/components/_hostcard.scss";
+
 function HostCard({ host }) {
   const [firstName, lastName] = host.name.split(" ");
   return (

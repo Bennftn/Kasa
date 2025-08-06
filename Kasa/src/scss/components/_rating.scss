@@ -1,20 +1,26 @@
 @import "../base/variables";
 
-/* style provisoire en attendant sass */
-
-.rating-stars {
-    display: flex;
-    gap: 5px;
+.rating {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .star {
-    font-size: 24px;
+  font-size: 25px;
+  color: #e3e3e3;
+  border-radius: 8px;
+  margin-right: 12px;
+  &.filled {
+    color: $primary-color;
+  }
 }
 
-.star.red {
-    color: #FF6060;
-}
-
-.star.grey {
-    color: #E3E3E3;
+@media (max-width: 768px) {
+  .rating {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .star {
+    font-size: 18px;
+  }
 }

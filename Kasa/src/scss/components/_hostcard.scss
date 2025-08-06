@@ -1,0 +1,24 @@
+@import "../base/variables";
+
+.host {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  .host-picture {
+    border-radius: 50%;
+    width: 64px;
+    margin-right: 0.6em;
+  }
+  .host-name {
+    flex-direction: column;
+    color: $primary-color;
+    font-size: 18px;
+    margin-right: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .host .host-name {
+    font-size: 12px;
+  }
+}
