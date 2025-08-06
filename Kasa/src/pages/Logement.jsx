@@ -2,53 +2,55 @@ import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logement.json";
 import Collapse from "../components/Collapse";
 import Carousel from "../components/Carousel";
-import Tag from "../components/Tag";
+import TagList from "../components/Tag";
 import Rating from "../components/Rating";
-import "../scss/pages/_logement.scss"; // ajout et creation du fichier par la suite
+import HostCard from "../components/HostCard";
+import "../scss/pages/_logement.scss";
 
-export default function Logement() {
+function Logement() {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
 
-  //redirige vers 404 si l'id n'existe pas
   if (!logement) {
     return <Navigate to="/404" />;
   }
 
+  const locationParts = logement.location.split(" - ");
+  const region = locationParts[0];
+  let city = locationParts[1] || "";
+  city = city.replace(/\s*\d+[a-zA-Z]*$/, "").trim();
+
   return (
-    <main className="logement-page">
-      <section className="logement-header">
-        {/*carousel + titre + hôte */}
-        <Carousel pictures={logement.pictures} />
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
-        <div className="logement-tags">
-          {logement.tags.map((tag, index) => (
-            <Tag key={index} text={tag} />
-          ))}
+    <div>
+      <Carousel pictures={logement.pictures} />
+      <div className="housing-header">
+        <div className="info-logement">
+          <h1 id="title-logement">{logement.title}</h1>
+          <p className="location">
+            {city}, {region}
+          </p>
+          <TagList tags={logement.tags} />
         </div>
-      </section>
-
-      {/* // test de l'affichage des images
-      <section className="logement-images">
-        {logement.pictures.map((pic, index) => (
-          <img key={index} src={pic} alt={`Vue ${index + 1}`} />
-        ))}
-        </section>*/}
-
-      <section className="logement-details">
-        <div className="host">
-          <p>{logement.host.name}</p>
-          <img src={logement.host.picture} alt={logement.host.name} />
+        <div className="rating-host">
+          <HostCard host={logement.host} />
+          <Rating rating={logement.rating} />
         </div>
+      </div>
 
-        <div className="rating">
-          <Rating rating={parseInt(logement.rating)} />
-        </div>
-      </section>
-
-      <Collapse title="Description" content={logement.description} />
-      <Collapse title="Équipements" content={logement.equipments} />
-    </main>
+      <div id="collapseLogement">
+        <Collapse title="Description" variant="housing">
+          {logement.description}
+        </Collapse>
+        <Collapse title="Équipements" variant="housing">
+          <ul>
+            {logement.equipments.map((equipement, index) => (
+              <li key={`${equipement}-${index}`}>{equipement}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </div>
+    </div>
   );
 }
+
+export default Logement;

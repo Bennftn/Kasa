@@ -1,18 +1,22 @@
 import "../scss/components/_rating.scss"; // a modifier plus tard
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Rating({ rating }) {
-    const totalStars = 5;
-    const stars = [];
+function Rating({ rating }) {
+  const totalStars = 5;
+  const filledStars = Math.round(Number(rating));
 
-    for (let i = 1; i <= totalStars; i++) {
-        stars.push(
-            <span
-            key={i}
-            className={i <= rating ? "star red" : "star grey"}
-            >
-                ★
-            </span>
-        );
-    }
-  return <div className="rating-stars">{stars}</div>;
+  return (
+    <div className="rating">
+      {[...Array(totalStars)].map((_, i) => (
+        <FontAwesomeIcon
+          key={i}
+          icon={faStar}
+          className={`star ${i < filledStars ? "filled" : ""}`}
+        />
+      ))}
+    </div>
+  );
 }
+
+export default Rating;

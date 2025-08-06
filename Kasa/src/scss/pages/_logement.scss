@@ -1,55 +1,108 @@
-@use "../base/_variables" as *;
+@use "../base/variables" as *;
+
 .logement-page {
-  padding: $spacing_lg;
+  max-width: 1240px;
+  margin: $spacing_xl auto $spacing_xl auto;
+  padding: 0 $spacing_md;
+}
 
-  .logement-header {
-    margin-bottom: $spacing_md;
-
-    h1 {
-      font-size: $font-size-large;
-      color: $primary-color;
-      font-family: $font-main;
-    }
-
-    p {
-      font-size: $font-size_small;
-      color: $text-color;
-      font-family: $font-main;
-    }
-  }
-
-  .logement-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: $spacing_md 0;
-
-    .host {
-      display: flex;
-      align-items: center;
-
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-left: $spacing_sm;
-      }
-
-      p {
-        margin: 0;
-        font-family: $font-main;
+.carousel-section {
+  width: 100%;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  margin-bottom: $spacing_xl;
+  .carousel {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 415px;
+      object-fit: cover;
+      border-radius: $radius-lg;
+      @media (max-width: 800px) {
+        height: 225px;
       }
     }
-
-    .rating {
-      color: $primary-color;
-      font-family: $font-main;
-    }
-  }
-
-  .logement-description {
-    margin-top: $spacing_md;
-    font-family: $font-main;
   }
 }
-/* Styles spécifiques à la page Logement TEST TEST TEST */
+
+.logement-header-top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing_lg;
+  margin-bottom: $spacing_lg;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: $spacing_md;
+    align-items: flex-start;
+  }
+}
+
+.logement-info {
+  flex: 1.5;
+  h1 {
+    color: $primary-color;
+    font-size: $font-size-large;
+    font-weight: 600;
+    margin-bottom: $spacing_sm;
+    font-family: $font-main;
+  }
+  .logement-location {
+    color: $text-color;
+    font-size: $font-size-base;
+    margin-bottom: $spacing_md;
+  }
+  .logement-tags {
+    display: flex;
+    gap: $spacing_sm;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+}
+
+.logement-host-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $spacing_md;
+  .logement-host {
+    display: flex;
+    align-items: center;
+    gap: $spacing_sm;
+    .host-name {
+      color: $primary-color;
+      font-size: $font-size-base;
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: right;
+      font-family: $font-main;
+    }
+    .host-picture {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $dark-grey;
+      background: $grey;
+      margin-left: $spacing_xs;
+    }
+  }
+  .logement-rating {
+    margin-top: $spacing_xs;
+  }
+}
+
+.logement-details {
+  display: flex;
+  gap: $spacing_xl;
+  margin-top: $spacing_xl;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: $spacing_md;
+  }
+  .collapse {
+    flex: 1;
+  }
+}
