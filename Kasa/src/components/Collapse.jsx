@@ -1,7 +1,3 @@
-// isOpen controle si le contenu est lisible
-// title est le test du bouton/ section
-//content peut etre un string ou un tableau
-// la flèche tourne selon l'etat open
 import { useState } from "react";
 import "../scss/components/_collapse.scss"; // ajout du fichier plus tard
 

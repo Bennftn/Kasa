@@ -5,16 +5,16 @@
   overflow: hidden;
 
   .collapse-header {
-    height: 52px;             /* hauteur exacte du bandeau */
-    background: #FF6060;      /* Kasa */
+    height: 52px;
+    background: #FF6060;
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 0 20px 0 18px;   /* ajuste si besoin à l’overlay */
+    padding: 0 20px 0 18px;
     border-radius: 10px;
     position: relative;
     font-weight: 600;
-    font-size: 18px;          /* ajuste si Figma diffère */
+    font-size: 18px;
     line-height: 1;
   }
 
@@ -24,7 +24,7 @@
     top: 50%;
     transform: translateY(-50%) rotate(0deg);
     transition: transform .2s ease;
-    width: 18px; height: 18px; /* à caler sur l’icône exacte */
+    width: 18px; height: 18px;
   }
   &.open .collapse-chevron {
     transform: translateY(-50%) rotate(180deg);
@@ -40,7 +40,7 @@
 .collapse-header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* flèche à droite */
+  justify-content: space-between;
   cursor: pointer;
 }
 .collapse-header h3 { margin: 0; font-size: 18px; font-weight: 600; }

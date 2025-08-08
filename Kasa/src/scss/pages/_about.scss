@@ -1,4 +1,3 @@
-/*test*/
 @import "../base/variables";
 
 body {
@@ -6,14 +5,17 @@ body {
 }
 
 .about .container-About {
-  width: 1023px;              /* largeur exacte */
-  margin: 0 auto;             /* centré */
+  width: 1023px;
+  margin: 0 auto;
   display: grid;
-  row-gap: 30px;              /* 30px entre chaque collapse */
+  row-gap: 30px;
+}
+
+.about .container-About .collapse:last-child {
+  margin-bottom: 47px;
 }
 
 
-/* collapse générique */
 .collapse {
   border-radius: $radius-sm;
   overflow: hidden;
@@ -25,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     border-radius: $radius-sm;
-    padding: 0 20px 0 18px;   // à régler à l’overlay
+    padding: 0 20px 0 18px;
     position: relative;
     font-weight: 600;
     font-size: 18px;
@@ -38,7 +40,7 @@ body {
     top: 50%;
     transform: translateY(-50%) rotate(0deg);
     transition: transform .2s ease;
-    width: 18px; height: 18px; // ajuste selon l’icône
+    width: 18px; height: 18px;
   }
 
   &.open .collapse-chevron { transform: translateY(-50%) rotate(180deg); }

@@ -4,14 +4,11 @@
   height: $banner-height;
   border-radius: $radius-lg;
   overflow: hidden;
-
-  /* aligne la bannière sur le container */
   max-width: $container-width;
-  margin: 24px auto 32px;     // ajuster ces marges à l’overlay
+  margin: 24px auto 32px;
   padding-left: $container-padding;
   padding-right: $container-padding;
 
-  /* on veut que l’image remplisse le bloc arrondi */
   .banner-image {
     width: 100%;
     height: 100%;
@@ -21,7 +18,7 @@
   }
 
   .banner-text {
-    position: absolute;       // si tu dois afficher du texte sur la home
+    position: absolute;
     inset: 0;
     display: grid;
     place-items: center;

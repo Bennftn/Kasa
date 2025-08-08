@@ -1,20 +1,26 @@
-@use "../base/_variables" as *;
+@import "../base/variables";
+
 .footer {
-    background-color: $dark-grey;
-    color: $white;
-    padding: $spacing-lg;
-    text-align: center;
-
-    .footer-logo {
-        height: 40px;
-        margin-bottom: $spacing-md;
-    }
-
-    p {
-        font-size: $font-size-small;
-        margin: 0;
-    }
-
+  background: #000;
+  color: #fff;
+  width: 100%;
 }
 
-@import "../base/variables";
+.footer-inner {
+  width: 1023px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 66px 0 30px;
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto 28px;
+  height: 40px;
+}
+
+.footer p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .9;
+}

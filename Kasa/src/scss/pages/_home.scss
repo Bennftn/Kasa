@@ -2,8 +2,7 @@
 
 .home {
   padding: 40px 0 60px 0;
-  min-height: calc(100vh - 140px); // header + footer
-
+  min-height: calc(100vh - 140px);
   .home-gallery {
     max-width: 1240px;
     margin-left: auto;
@@ -45,9 +44,9 @@
   }
 
   .home-gallery {
-  background: $secondary-color;      // Utilise ta variable ou #F7F7F7
+  background: $secondary-color;
   border-radius: 25px;
-  padding: 45px 60px 35px 60px;      // Haut-Droite-Bas-Gauche (ajuste selon rendu)
+  padding: 45px 60px 35px 60px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.05);
   margin-bottom: 40px;
 
@@ -55,7 +54,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 60px;
     @media (max-width: 900px) {
-    grid-template-columns: 1fr; // 👉 1 colonne sur mobile/tablette
+    grid-template-columns: 1fr;
     gap: 30px 0;
     }
   }

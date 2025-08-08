@@ -17,13 +17,13 @@ header {
 
 .header-logo {
   display: block;
-  height: 48px;               // ajuste pour matcher l’overlay
+  height: 48px;
 }
 
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 57px;                  // espace entre "Accueil" et "À propos"
+  gap: 57px;
   a {
     font-weight: 500;
     text-decoration: none;

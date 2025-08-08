@@ -1,29 +1,12 @@
-@use "./base/reset.scss";
-@use "./base/base.scss";
-@use "./base/variables.scss";
+@use "./base/reset";
+@use "./base/variables";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/main";
+@use "./components/footer";
+@use "./pages/logement";
 
-@use "./layout/header.scss";
-@use "./layout/footer.scss";
-@use "./layout/main.scss";
-
-@import "components/_footer.scss";
-@import "pages/_logement.scss";
-@use "pages/logement.scss";
-
-@import 'reset';
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'components';
-
+/* Styles globaux */
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
-.main-container {
-  max-width: $container-width;
-  margin: 0 auto;
-  padding-left: $container-padding;
-  padding-right: $container-padding;
 }
