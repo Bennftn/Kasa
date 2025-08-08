@@ -1,2 +1,53 @@
 /*test*/
 @import "../base/variables";
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.about .container-About {
+  width: 1023px;              /* largeur exacte */
+  margin: 0 auto;             /* centré */
+  display: grid;
+  row-gap: 30px;              /* 30px entre chaque collapse */
+}
+
+
+/* collapse générique */
+.collapse {
+  border-radius: $radius-sm;
+  overflow: hidden;
+
+  .collapse-header {
+    height: $collapse-header-h;
+    background: $color-primary;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: $radius-sm;
+    padding: 0 20px 0 18px;   // à régler à l’overlay
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .collapse-chevron {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform .2s ease;
+    width: 18px; height: 18px; // ajuste selon l’icône
+  }
+
+  &.open .collapse-chevron { transform: translateY(-50%) rotate(180deg); }
+
+  .collapse-content {
+    background: $color-grey;
+    padding: 18px 20px;
+    border-radius: 0 0 $radius-sm $radius-sm;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

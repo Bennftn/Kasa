@@ -6,6 +6,11 @@ $white: #ffffff;
 $grey: #e3e3e3;
 $dark-grey: #c4c4c4;
 
+$color-primary: #FF6060;      // Kasa
+$color-bg: #FFFFFF;
+$color-grey: #F6F6F6;
+$color-text: #000000;
+
 // Typographie
 $font-main: 'Montserrat', sans-serif;
 
@@ -22,6 +27,15 @@ $spacing_lg: 24px;
 $spacing_xl: 32px;
 
 // Border radius
-$radius-sm: 5px;
+$radius-sm: 10px;
 $radius-md: 10px;
-$radius-lg: 20px;
+$radius-lg: 25px;
+
+$header-height: 68px;         // à affiner à l’overlay
+$banner-height: 223px;        // à affiner à l’overlay
+$collapse-header-h: 52px;
+
+$container-width: 1240px;     // largeur utile (à ajuster si ta maquette en montre une autre)
+$container-padding: 100px;    // marges latérales depuis 1440 (≈ (1440-1240)/2)
+$radius-lg: 25px;
+$radius-sm: 10px;

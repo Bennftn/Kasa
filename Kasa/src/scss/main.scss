@@ -16,3 +16,14 @@
 @import 'base';
 @import 'layout';
 @import 'components';
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}

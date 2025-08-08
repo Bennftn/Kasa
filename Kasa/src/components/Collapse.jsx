@@ -5,7 +5,7 @@
 import { useState } from "react";
 import "../scss/components/_collapse.scss"; // ajout du fichier plus tard
 
-export default function Collapse({ title, content }) {
+export default function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleCollapse = () => {
@@ -20,17 +20,9 @@ export default function Collapse({ title, content }) {
           </div>
 
           {isOpen && (
-              <div className="collapse-content">
-                  {Array.isArray(content) ? (
-                      <ul>
-                          {content.map((item, index) => (
-                              <li key={index}>{item}</li>
-                          ))}
-                      </ul>
-                  ) : (
-                      <p>{content}</p>
-                  )}
-              </div>
+            <div className="collapse-content">
+                {children}
+            </div>
           )}
       </div>
   );

@@ -1,1 +1,67 @@
 @import "../base/variables";
+
+.collapse {
+  border-radius: 10px;
+  overflow: hidden;
+
+  .collapse-header {
+    height: 52px;             /* hauteur exacte du bandeau */
+    background: #FF6060;      /* Kasa */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 18px;   /* ajuste si besoin à l’overlay */
+    border-radius: 10px;
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;          /* ajuste si Figma diffère */
+    line-height: 1;
+  }
+
+  .collapse-chevron {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform .2s ease;
+    width: 18px; height: 18px; /* à caler sur l’icône exacte */
+  }
+  &.open .collapse-chevron {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .collapse-content {
+    background: #F6F6F6;
+    padding: 18px 20px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* flèche à droite */
+  cursor: pointer;
+}
+.collapse-header h3 { margin: 0; font-size: 18px; font-weight: 600; }
+
+.collapse .arrow {
+  transform: rotate(0deg);
+  transition: transform .2s ease;
+}
+.collapse .arrow.open {
+  transform: rotate(180deg);
+}
+
+
+// Animation d'apparition du contenu
+@keyframes collapseAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
