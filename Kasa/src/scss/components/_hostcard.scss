@@ -2,23 +2,27 @@
 
 .host {
   display: flex;
-  justify-content: end;
   align-items: center;
-  .host-picture {
-    border-radius: 50%;
-    width: 64px;
-    margin-right: 0.6em;
-  }
-  .host-name {
-    flex-direction: column;
-    color: $primary-color;
-    font-size: 18px;
-    margin-right: 1em;
-  }
+  gap: 10px;
 }
 
-@media (max-width: 768px) {
-  .host .host-name {
-    font-size: 12px;
-  }
+.host-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.2;
+  font-weight: 500;
+  color: $primary-color;
+}
+
+.first-name,
+.last-name {
+  font-size: 18px;
+}
+
+.host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
 }

@@ -21,7 +21,7 @@ function Logement() {
   city = city.replace(/\s*\d+[a-zA-Z]*$/, "").trim();
 
   return (
-    <div>
+    <div className="housing-info">
       <Carousel pictures={logement.pictures} />
       <div className="logement-header">
         <div className="info-logement">
