@@ -1,4 +1,4 @@
-import bannerImage from "../assets/images/image-1.png";
+import bannerImage from "../assets/images/Image-1.png";
 import "../scss/pages/_home.scss"; // fichier a creer plus tard pour le css
 import logements from "../data/logement.json";
 import Card from "../components/Card";
@@ -9,7 +9,9 @@ export default function Home() {
       <section className="home-banner">
         <img src={bannerImage} alt="Bannière d'accueil" className="banner-image" />
         <div className="banner-text">
+          <p>
           Chez vous, partout et ailleurs
+          </p>
         </div>
       </section>
 
