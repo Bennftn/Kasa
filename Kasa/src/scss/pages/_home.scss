@@ -75,3 +75,54 @@
     }
   }
 }
+
+/* ===== Mobile Home (≤768px) — overrides fermes ===== */
+@media (max-width: 768px) {
+  .home .home-banner {
+    width: auto;
+    margin: 0 20px 24px;
+    height: 111px;
+    border-radius: 10px;
+
+    .banner-image { border-radius: 10px; }
+  }
+
+  /* on masque le texte original et on le remplace par ::after */
+  .home .home-banner .banner-text {
+    font-size: 0;              /* cache le texte source */
+    line-height: 0;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* alignement à gauche */
+  }
+  .home .home-banner .banner-text::after {
+    content: "Chez vous,\A partout et ailleurs";
+    white-space: pre-line;
+    display: block;
+    text-align: left;           /* texte aligné à gauche */
+    margin-top: 35px;
+    margin-left: 10px;
+
+    /* styles mobiles du titre */
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+    transform: translateY(-2px);
+  }
+
+  .home .home-gallery {
+    width: auto !important;
+    margin: 0 20px 40px !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    justify-items: stretch;
+  }
+}
