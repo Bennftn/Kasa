@@ -74,13 +74,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  .about { padding: 20px 0 40px; }
+  .about {
+    padding: 40px 0 40px;
+  }
 
   .about .about-banner,
   .about .home-banner {
     width: auto;
     height: 111px;
-    margin: 0 20px 20px;
+    margin: 0 20px 50px;
     border-radius: 10px;
   }
 
