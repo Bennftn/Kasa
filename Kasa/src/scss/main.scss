@@ -1,14 +1,45 @@
-@use "./base/reset";
-@use "./base/variables";
-@use "./layout/header";
-@use "./layout/footer";
-@use "./layout/main";
-@use "./components/footer";
-@use "./pages/logement";
+@use "base/reset";
+@use "base/variables" as *;   /* permet d’utiliser les variables sans namespace */
 
-@import "responsive/mobile";
+/* Layout */
+@use "components/header";
+/* @use "layout/footer";  // ⟵ garde ce fichier OU celui des components, pas les deux */
+@use "components/footer";
+
+/* Pages */
+@use "pages/logement";
+/* @use "pages/home";   // ajoute si tu l’as */
+
+/* Responsive – toujours à la fin pour écraser le desktop */
+@use "responsive/mobile";
 
 /* Styles globaux */
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
+
+
+/* Styles globaux */
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Reset minimal */
+html, body, #root { height: 100%; }
+body {
+  margin: 0;                /* <= enlève le bloc blanc de 8px */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Mise en page pour coller le footer en bas quand il y a peu de contenu */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+

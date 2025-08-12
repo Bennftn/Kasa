@@ -52,13 +52,20 @@
 
 @media (max-width: 768px) {
   .slideshow {
-    height: 255px;
-    .slideshow-image {
-      height: 100%;
-    }
-    .nav img {
-      width: 12px;
-      height: 20px;
-    }
+    width: 335px;
+    height: 255px;              /* maquette mobile */
+    margin: 0 20px;
+    border-radius: 10px;
+  }
+
+  .slideshow .nav {
+    width: 36px; height: 36px;
+  }
+  .slideshow .nav.left  { left: 10px; }
+  .slideshow .nav.right { right: 10px; }
+
+  .slideshow .counter {
+    font-size: 12px;
+    bottom: 8px;
   }
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../scss/components/_collapse.scss"; // ajout du fichier plus tard
+import "../scss/components/_collapse.scss";
+import arrowIcon from "../assets/icones/Fleche-droite.png";
 
 export default function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);

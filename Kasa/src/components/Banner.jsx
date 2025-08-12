@@ -1,11 +1,11 @@
 import "../scss/components/_banner.scss";
 import React from "react";
 
-export default function Banner({ image, text, alt }) {
+export default function Banner({ image, text, alt, className = "" }) {
   return (
-    <div className="banner">
-        <img src={image} alt={alt} className="banner-image" />
-        {text && <h1 className="banner-text">{text}</h1>}
-    </div>
+    <section className={`home-banner ${className}`}>
+      <img className="banner-image" src={image} alt={alt} />
+      {text && <div className="banner-text">{text}</div>}
+    </section>
   );
 }

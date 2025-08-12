@@ -9,7 +9,8 @@ function About() {
       <Banner
       image={imageBanner}
       text=""
-      alt="Photo de montagne"/>
+      alt="Photo de montagne"
+      className="about-banner"/>
       <div className="container-About">
         <Collapse title="Fiabilité">
           <p>

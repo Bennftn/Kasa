@@ -49,3 +49,34 @@
     font-size: 14px;
   }
 }
+
+/* ===== 404 — Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .error-page {
+    /* pleine largeur + marges 20px comme le reste du site */
+    width: auto;
+    max-width: none;
+    padding: 60px 20px 40px;     /* espace haut/bas */
+  }
+
+  .error-title {
+    font-size: 96px;             /* maquette */
+    margin: 48px 0 40px;         /* espace autour du “404” */
+    letter-spacing: -1px;
+  }
+
+  .error-message {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 60px;
+    max-width: 280px;            /* force la césure comme sur ta capture */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .error404link {
+    font-size: 14px;
+    text-underline-offset: 3px;
+    margin: 0 0 80px;            /* grand espace avant le footer */
+  }
+}
