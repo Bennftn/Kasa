@@ -23,4 +23,34 @@
   font-size: 18px;
   line-height: 1.4;
   opacity: .9;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    width: auto;
+    padding: 60px 20px 30px;
+  }
+
+  .footer-logo {
+    height: 32px;
+    margin-bottom: 16px;
+  }
+
+  .footer p {
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .footer p::after {
+    content: "2020 Kasa. All\A rights reserved";
+    white-space: pre-line;
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    opacity: .9;
+    color: #fff;
+    font-weight: 400;
+  }
 }

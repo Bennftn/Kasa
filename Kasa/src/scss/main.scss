@@ -6,6 +6,8 @@
 @use "./components/footer";
 @use "./pages/logement";
 
+@import "responsive/mobile";
+
 /* Styles globaux */
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
