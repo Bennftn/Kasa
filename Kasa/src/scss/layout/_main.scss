@@ -16,17 +16,24 @@ main {
   flex: 1;
 }
 
-html, body, #root { height: 100%; }
-body { margin: 0; }
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
 
 #root {
   display: flex;
   flex-direction: column;
-  /* mieux que 100vh sur mobile : */
-  min-height: 100svh;   /* iOS/Android “small viewport” */
-  min-height: 100vh;    /* fallback */
+  min-height: 100svh;
+  min-height: 100vh;
 }
 
-main { flex: 1 0 auto; }   /* le contenu pousse le footer */
-.footer { margin-top: auto; }
+main {
+  flex: 1 0 auto;
+}
+.footer {
+  margin-top: auto;
+}
 

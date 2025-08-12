@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../scss/components/_carousel.scss"; // a modifier plus tard
+import "../scss/components/_carousel.scss";
 import leftArrow from "../assets/icones/Fleche-gauche.png";
 import rightArrow from "../assets/icones/Fleche-droite.png";
 

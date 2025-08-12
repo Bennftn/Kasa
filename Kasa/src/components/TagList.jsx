@@ -1,4 +1,4 @@
-import "../scss/components/_taglist.scss"; // a modifier plus tard
+import "../scss/components/_taglist.scss";
 
 function TagList({ tags }) {
   return (

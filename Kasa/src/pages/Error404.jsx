@@ -1,7 +1,5 @@
-// page 404 simple pour l'instant
-
 import { Link } from "react-router-dom"
-import "../scss/pages/_error404.scss"; // ajout et creation du fichier par la suite
+import "../scss/pages/_error404.scss";
 
 export default function Error404() {
   return (

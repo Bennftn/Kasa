@@ -1,4 +1,4 @@
-import "../scss/components/_rating.scss"; // a modifier plus tard
+import "../scss/components/_rating.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
